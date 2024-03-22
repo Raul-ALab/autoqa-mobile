@@ -18,8 +18,7 @@ public class DriverSetUp {
     private DriverSetUp() {
     }
 
-
-    public static AppiumDriver androidDriverSetup() {
+    private static AppiumDriver androidDriverSetup() {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName("Android");
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
@@ -30,6 +29,17 @@ public class DriverSetUp {
             driver = new AndroidDriver(new URL(LOCALHOST), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
+        }
+        return driver;
+    }
+
+    public static AppiumDriver startAndroidDriver() {
+        if (driver == null) {
+            try {
+                driver = androidDriverSetup();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
         return driver;
     }
