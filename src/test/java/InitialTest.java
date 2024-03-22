@@ -17,6 +17,6 @@ public class InitialTest {
     public void initialSetupTest(){
 
         views.clickViews();
+        views.scrollToElement();
     }
-
 }
