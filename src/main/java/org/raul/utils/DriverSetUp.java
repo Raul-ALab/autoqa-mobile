@@ -10,8 +10,14 @@ import java.net.URL;
 
 public class DriverSetUp {
 
-    private static AppiumDriver driver;
     private static final String LOCALHOST = "http://127.0.0.1:4723";
+    private static AppiumDriver driver;
+
+
+    // restrict access to instantiation
+    private DriverSetUp() {
+    }
+
 
     public static AppiumDriver androidDriverSetup() {
         UiAutomator2Options options = new UiAutomator2Options();
