@@ -23,12 +23,11 @@ public class CountViewsSubMenusTest {
     }
 
     @Test
-    public void initialSetupTest() {
+    public void verifySubMenuElementsTotalOfViews() {
         views.clickViews(driver);
 
         int actualResult = views.totalSubMenuElements();
         int expectedResult = 42;
         Assert.assertEquals(actualResult, expectedResult, "Total of Views sub-menu elements is 42!");
-
     }
 }
