@@ -23,7 +23,8 @@ public class DriverSetUp {
         options.setPlatformName("Android");
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setDeviceName("Aqa");
-        options.setApp("C:/Users/Rashad Gurbanov/Desktop/DevLab/Java/AndersenLab/ApiDemos-debug.apk");
+        options.setAppPackage("io.appium.android.apis");
+        options.setAppActivity("io.appium.android.apis.ApiDemos");
 
         try {
             driver = new AndroidDriver(new URL(LOCALHOST), options);
