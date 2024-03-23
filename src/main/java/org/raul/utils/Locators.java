@@ -11,6 +11,8 @@ public interface Locators {
     By dateChangeLocator = AppiumBy.accessibilityId("change the date");
     By timeChangeLocator = AppiumBy.accessibilityId("change the time (spinner)");
     By txtSwitcherLocator = AppiumBy.accessibilityId("TextSwitcher");
+    By nextButtonLocator = AppiumBy.accessibilityId("Next");
+    By counterLocator = AppiumBy.id("io.appium.android.apis:id/switcher");
     By viewContainerLocator = AppiumBy.id("android:id/list");
     By yearHeaderLocator = AppiumBy.id("android:id/date_picker_header_year");
     By monthViewLocator = AppiumBy.id("android:id/month_view");
