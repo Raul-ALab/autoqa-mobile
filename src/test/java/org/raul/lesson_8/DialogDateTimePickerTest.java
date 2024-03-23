@@ -23,6 +23,7 @@ public class DialogDateTimePickerTest {
     @Test
     public void verifyDatePicker() {
         String year = "2024";
+        String month = "3";
         String day = "18";
 
         String actualDate = new DialogDatePicker(driver)
@@ -34,7 +35,7 @@ public class DialogDateTimePickerTest {
                 .pickDate(day)
                 .getDateResult();
 
-        String expectedDate = "3-18-2024";
+        String expectedDate = month + "-" + day + "-" + year;
         Assert.assertEquals(actualDate, expectedDate);
     }
 
